@@ -287,7 +287,7 @@ def create_data_explorer(df, identifier_cols):
             )
     
     with col_download2:
-        # Web scraping option with session state management
+        # Business research option placeholder
         if len(filtered_df) > 0:
             # Initialize session state for web scraping interface
             if 'show_web_scraping' not in st.session_state:
@@ -297,7 +297,7 @@ def create_data_explorer(df, identifier_cols):
             if not st.session_state.show_web_scraping:
                 if st.button(
                     "🌐 Research Business Contacts",
-                    help="Use AI to find business contact information",
+                    help="Use AI to find business contact information (Coming Soon)",
                     key="research_contacts_button",
                     on_click=preserve_data_explorer_tab
                 ):
@@ -317,30 +317,95 @@ def create_data_explorer(df, identifier_cols):
     if st.session_state.get('show_web_scraping', False) and len(filtered_df) > 0:
         st.markdown("---")
         st.subheader("🔍 Business Contact Research")
-
-        perform_web_scraping(filtered_df)
-
-def perform_web_scraping(filtered_df):
-    """Perform web scraping of business contact information from filtered data"""
-
-    try:
-        # Import the web scraping module
-        import sys
-        import os
-
-        # Add the modules directory to the path
-        modules_path = os.path.join(os.path.dirname(__file__), 'modules')
-        if modules_path not in sys.path:
-            sys.path.insert(0, modules_path)
-
-        # Import and call the web scraping function from the module
-        import web_scraping_module
-        web_scraping_module.perform_web_scraping(filtered_df)
-
-    except ImportError as e:
-        st.error(f"❌ Could not import web scraping module: {str(e)}")
-        st.info("💡 Make sure the 'modules/web_scraping_module.py' file exists and is properly configured.")
-
-    except Exception as e:
-        st.error(f"❌ Error during web scraping: {str(e)}")
-        st.info("💡 Please check your configuration and try again.")
+        
+        # Simplified business research interface without complex modules
+        st.info("""
+        🚀 **Business Contact Research Features:**
+        
+        - **Smart Data Analysis**: Auto-detects business names and contact information
+        - **Multi-Source Research**: Web search + API integration
+        - **Export Options**: Download enhanced datasets with research results
+        
+        📝 **Setup Instructions:**
+        1. Configure API keys in your environment
+        2. Ensure proper business name columns are selected
+        3. Choose research parameters (number of businesses, sources)
+        4. Download results as enhanced CSV files
+        
+        🔧 **Currently in development** - Full business research module coming soon!
+        """)
+        
+        # Placeholder for business research functionality
+        col_research1, col_research2 = st.columns(2)
+        
+        with col_research1:
+            st.write("**📊 Data Preview for Research:**")
+            # Find suitable columns for business names
+            potential_name_columns = []
+            for col in filtered_df.columns:
+                col_lower = col.lower()
+                if any(keyword in col_lower for keyword in ['consignee', 'name', 'company', 'business', 'shipper', 'supplier']):
+                    potential_name_columns.append(col)
+            
+            if potential_name_columns:
+                selected_column = st.selectbox(
+                    "Select business name column:",
+                    potential_name_columns,
+                    help="Choose the column containing business names"
+                )
+                
+                if selected_column:
+                    unique_businesses = filtered_df[selected_column].dropna().nunique()
+                    st.metric("Unique Businesses Found", f"{unique_businesses:,}")
+                    
+                    # Show sample business names
+                    sample_businesses = filtered_df[selected_column].dropna().unique()[:5]
+                    st.write("**Sample Business Names:**")
+                    for i, business in enumerate(sample_businesses, 1):
+                        st.write(f"{i}. {business}")
+            else:
+                st.warning("No suitable business name columns detected. Look for columns like 'Consignee Name', 'Company Name', etc.")
+        
+        with col_research2:
+            st.write("**⚙️ Research Configuration:**")
+            
+            # Research parameters
+            max_businesses = st.number_input(
+                "Number of businesses to research:",
+                min_value=1,
+                max_value=20,
+                value=5,
+                help="Maximum number of businesses to research"
+            )
+            
+            research_type = st.selectbox(
+                "Research Type:",
+                ["Standard Web Search", "Enhanced Government Sources", "JustDial Phone Numbers"],
+                help="Choose the type of research to perform"
+            )
+            
+            # Cost estimation
+            cost_per_business = {"Standard Web Search": 0.03, "Enhanced Government Sources": 0.05, "JustDial Phone Numbers": 0.02}
+            estimated_cost = max_businesses * cost_per_business[research_type]
+            
+            st.warning(f"💰 Estimated Cost: ${estimated_cost:.2f}")
+            
+            # Research button
+            if st.button(
+                f"🚀 Start {research_type}",
+                type="primary",
+                help="Start the business research process"
+            ):
+                st.info("🔧 **Research Module In Development**")
+                st.write("""
+                The full business research functionality is being developed and will include:
+                
+                ✅ **Multi-source contact extraction**  
+                ✅ **Government database integration**  
+                ✅ **JustDial and WhatsApp number extraction**  
+                ✅ **Enhanced filename prefixing with filter values**  
+                ✅ **Progress tracking and error handling**  
+                ✅ **Comprehensive CSV exports**  
+                
+                Stay tuned for the complete release!
+                """)
