@@ -1,127 +1,188 @@
-# 🚀 TeakMarketMarph - Advanced Business Contact Research Platform
+# 🚀 TeakMarketMarph - AI-Powered Business Data Analysis Platform
 
-An intelligent AI-powered web scraping tool for market research with multi-source data extraction, enhanced government research, and JustDial integration. 
+An intelligent AI-powered data analysis tool for market research with smart data detection, advanced filtering, and business intelligence capabilities. Perfect for analyzing trade data, identifying business patterns, and conducting market research.
 
-Perfect for finding business contacts, analyzing trade data, and conducting comprehensive market research with advanced filtering capabilities.
+🌟 **Live Demo:** [teakmarketmarph.streamlit.app](https://teakmarketmarph.streamlit.app)
 
-## ✨ Key Features
+## ✨ Current Features (Fully Working)
 
-- **Smart Data Loading**: Auto-detects identifier columns (HS codes, product codes)
-- **AI Chat Interface**: Ask questions about your data in natural language
-- **Multiple AI Providers**: Claude, Groq, OpenAI, and local analysis
-- **Advanced Filtering**: Business intelligence focused data exploration
-- **Automated Research**: Multi-source business contact finding
-- **Enhanced Government Research**: Government sources integration
-- **JustDial Integration**: Phone number extraction from JustDial
-- **Export Capabilities**: Enhanced datasets with research results
+### 📊 Smart Data Analysis
+- **Auto-detects identifier columns** (HS codes, product codes, business IDs)
+- **Intelligent data type detection** preserves data integrity for trade analysis
+- **Advanced filtering system** with primary/secondary filters and text search
+- **Business intelligence metrics** with real-time statistics
 
-## 🛠️ Quick Start
+### 🤖 AI-Powered Insights
+- **Chat with your data** using natural language queries
+- **Groq AI integration** for fast, cost-effective analysis
+- **Data pattern recognition** and automated insights
+- **Custom visualization recommendations**
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Ramgithubai/TeakMarketMarph.git
-   cd TeakMarketMarph
-   ```
+### 📈 Interactive Visualizations
+- **Quick visualization builder** with auto-chart detection
+- **Category distribution analysis** for business data
+- **Numeric trend analysis** with histogram distributions
+- **Export-ready charts** for presentations
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 📁 Smart File Handling
+- **CSV and Excel support** with sheet selection
+- **Automatic encoding detection** for international data
+- **Large file processing** optimized for business datasets
+- **Download filtered results** with intelligent naming
 
-3. **Configure API keys** (Optional - app works without them)
-   ```bash
-   cp .env.example .env
-   # Edit .env with your actual API keys
-   ```
+## 🚀 Quick Start
 
-4. **Run the application**
-   ```bash
-   streamlit run ai_csv_analyzer.py
-   ```
+### Option 1: Use Online (Recommended)
+Visit [teakmarketmarph.streamlit.app](https://teakmarketmarph.streamlit.app) - no setup required!
 
-## 🔐 API Configuration
+### Option 2: Local Development
+```bash
+# Clone the repository
+git clone https://github.com/Ramgithubai/TeakMarketMarph.git
+cd TeakMarketMarph
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run ai_csv_analyzer.py
+```
+
+### Option 3: Deploy Your Own
+[![Deploy to Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+
+1. Fork this repository
+2. Connect to [Streamlit Cloud](https://share.streamlit.io)
+3. Deploy with `ai_csv_analyzer.py` as main file
+
+## 🔐 API Configuration (Optional)
 
 The app works without API keys but provides enhanced features when configured:
 
-- `GROQ_API_KEY` - For Groq AI chat (Recommended)
-- `OPENAI_API_KEY` - For OpenAI GPT chat  
-- `TAVILY_API_KEY` - For web scraping research
-
-Get API keys from:
-- [Groq Console](https://console.groq.com/keys) (Fast, cost-effective)
-- [OpenAI API](https://platform.openai.com/api-keys)
-- [Tavily API](https://tavily.com)
-
-## 📊 Usage
-
-1. **Upload CSV/Excel files** - Intelligent data type detection
-2. **Explore data** - Advanced filtering and business intelligence
-3. **Chat with your data** - Natural language AI analysis
-4. **Research business contacts** - Multi-source contact extraction
-5. **Export enhanced datasets** - Original data + research results
-
-## 🌟 Special Features
-
-### Enhanced Timber Research
-Smart filtering and research specifically designed for teak wood and timber businesses with:
-- Product description filtering (TEAK, WOOD, BOARD, TIMBER, LUMBER)
-- City-based filtering
-- Specialized contact extraction
-
-### Multi-Source Research
-- **Standard Research**: Web-based contact extraction
-- **Enhanced Research**: Government sources + web research
-- **JustDial Research**: Phone number extraction with WhatsApp integration
-
-### Intelligent Data Detection
-- Auto-detects HS codes, product codes, and other identifiers
-- Preserves data integrity for trade and business analysis
-- Smart visualization recommendations
-
-## 🚀 Deployment
-
-### Streamlit Cloud (Recommended)
-1. Push to GitHub
-2. Connect to [Streamlit Cloud](https://share.streamlit.io)
-3. Deploy with `ai_csv_analyzer.py` as main file
-4. Add API keys in Streamlit Cloud secrets
-
-### Local Development
 ```bash
-streamlit run ai_csv_analyzer.py
+# Copy environment template
+cp .env.example .env
+
+# Add your API keys (optional)
+GROQ_API_KEY=gsk_your_groq_key_here
 ```
+
+**Get API keys:**
+- [Groq Console](https://console.groq.com/keys) - Fast, cost-effective AI analysis
+
+## 📊 Perfect For
+
+### Trade Data Analysis
+- **Import/Export data** with HS code detection
+- **Customs data analysis** with automated categorization
+- **Supplier/buyer identification** and contact research
+- **Trade pattern analysis** with filtering and insights
+
+### Business Intelligence
+- **Customer data analysis** with smart segmentation
+- **Product catalog analysis** with code detection
+- **Market research data** with AI-powered insights
+- **Sales data analysis** with trend identification
+
+### Data Exploration
+- **Large dataset exploration** with intelligent filtering
+- **Pattern discovery** using AI analysis
+- **Data quality assessment** with completeness metrics
+- **Quick visualization** for presentations
+
+## 🛠️ How It Works
+
+1. **📁 Upload Your Data**
+   - Drag & drop CSV or Excel files
+   - Automatic data type detection
+   - Identifier column recognition
+
+2. **🔍 Explore with Filters**
+   - Primary/secondary categorical filters
+   - Text search across all columns
+   - Real-time filtering with statistics
+
+3. **🤖 AI Analysis**
+   - Ask questions in natural language
+   - Get insights about patterns and trends
+   - Automated data quality assessment
+
+4. **📈 Visualize Results**
+   - Auto-generated charts and graphs
+   - Interactive visualizations
+   - Export-ready presentations
+
+5. **📥 Export Enhanced Data**
+   - Download filtered results
+   - Enhanced datasets with analysis
+   - Professional CSV formatting
+
+## 🏗️ Coming Soon: Business Research Module
+
+We're developing advanced business contact research features:
+
+- 🌐 **Multi-source contact extraction**
+- 🏛️ **Government database integration**
+- 📞 **JustDial phone number extraction**
+- 📧 **Email and website discovery**
+- 🔗 **Enhanced dataset exports**
+
+*The core data analysis platform is fully functional and ready for production use.*
 
 ## 📁 Project Structure
 
 ```
 TeakMarketMarph/
-├── ai_csv_analyzer.py          # Main application
-├── data_explorer.py            # Advanced data exploration
-├── modules/
-│   ├── web_scraping_module.py  # Core web scraping (FIXED)
-│   ├── enhanced_government_researcher.py
-│   ├── justdial_researcher.py
-│   └── streamlit_business_researcher.py
-├── requirements.txt            # Dependencies
-├── .env.example               # Environment variables template
-└── .streamlit/                # Streamlit configuration
+├── ai_csv_analyzer.py          # Main application (✅ Working)
+├── data_explorer.py            # Advanced data exploration (✅ Working)
+├── requirements.txt            # Dependencies (✅ Optimized)
+├── .env.example               # Environment template
+├── .streamlit/                # Streamlit configuration
+└── modules/                   # Business research (🚧 In Development)
 ```
 
-## 🔧 Recent Fixes
+## 🔧 Technical Details
 
-- ✅ **Fixed `get_selected_city_from_df` error** - Added missing function for filename prefixing
-- ✅ **Enhanced filename generation** - Uses primary filter values as prefixes
-- ✅ **Improved error handling** - Better debugging and user guidance
-- ✅ **Optimized data processing** - Smarter duplicate handling
+- **Framework:** Streamlit for web interface
+- **Data Processing:** Pandas with intelligent type detection
+- **Visualizations:** Plotly for interactive charts
+- **AI Integration:** Groq API for natural language analysis
+- **Deployment:** Optimized for Streamlit Cloud
+
+## 🤝 Contributing
+
+Contributions welcome! The platform is designed for extensibility:
+
+1. **Core data analysis** - Fully stable
+2. **Business research modules** - Under active development
+3. **API integrations** - Modular design for easy additions
 
 ## 📝 License
 
 MIT License - See LICENSE file for details.
 
-## 🤝 Contributing
+## 💡 Use Cases
 
-Contributions welcome! Please read the contributing guidelines and submit pull requests for any improvements.
+**Import/Export Analysis:**
+- Analyze customs data with automatic HS code detection
+- Identify top trading partners and products
+- Track trade patterns over time
+
+**Market Research:**
+- Segment customers by behavior patterns
+- Analyze product performance across regions
+- Discover market opportunities with AI insights
+
+**Business Intelligence:**
+- Process large datasets with smart filtering
+- Generate insights for executive reporting
+- Export analysis-ready data for presentations
 
 ---
 
-*Built with ❤️ for business intelligence and market research professionals*
+*Built with ❤️ for data analysts, market researchers, and business intelligence professionals*
+
+**🔗 Links:**
+- **Live App:** [teakmarketmarph.streamlit.app](https://teakmarketmarph.streamlit.app)
+- **Repository:** [github.com/Ramgithubai/TeakMarketMarph](https://github.com/Ramgithubai/TeakMarketMarph)
+- **Issues:** [Report bugs or request features](https://github.com/Ramgithubai/TeakMarketMarph/issues)
